@@ -15,6 +15,7 @@ const gameList = () => {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-black relative">
       <h3 className="fixed top-5 left-5">Hello, {nickname}님!</h3>
+
       <Stars />
       <span className="text-100 text-white">게 임</span>
       <div
