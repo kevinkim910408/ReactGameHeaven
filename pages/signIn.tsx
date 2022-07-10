@@ -8,7 +8,8 @@ const signIn = () => {
   const [nickname, setNickname] = useState("");
 
   const route = useRouteHandler();
-  const onClick = () => {
+  const onClick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     localStorage.setItem("nickname", nickname);
     route("/gameList");
   };
