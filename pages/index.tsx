@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Seo from "../shared/Seo";
-import db from "../shared/firebase";
 import Image from "next/image";
 import reactLogo from "../public/main/reactLogo.png";
 import { useRouter } from "next/router";
@@ -8,7 +7,7 @@ import { useRouter } from "next/router";
 const Home: NextPage = () => {
   const router = useRouter();
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center border-8 border-blue py-2 bg-black">
+    <div className="wrapper border-blue">
       <Seo title="Home" />
       <Image src={reactLogo} width={500} height={500} />
       <h1>리액트 게임 천국</h1>
