@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import velagaLogo from "../public/velaga/velagaLogo.png";
 import BackBtn from "components/backBtn";
+import useRouteHandler from "hooks/useRouteHandler";
 
 const velagaMain = () => {
+  const route = useRouteHandler();
   return (
     <div className="wrapper space-y-20">
       <BackBtn />
@@ -15,7 +17,7 @@ const velagaMain = () => {
         <button className="hover">
           <h2>START</h2>
         </button>
-        <button className="hover">
+        <button className="hover" onClick={() => route("/velagaRanking")}>
           <h2>RANKING</h2>
         </button>
       </div>

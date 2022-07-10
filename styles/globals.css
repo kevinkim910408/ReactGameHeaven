@@ -37,4 +37,7 @@
   .hover {
     @apply hover:opacity-70 hover:cursor-pointer transition-all;
   }
+  .my-table-spacing {
+    border-spacing: theme("spacing.3");
+  }
 }
