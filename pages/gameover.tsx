@@ -5,7 +5,7 @@ import Image from "next/image";
 const gameover = (props: { img: string }) => {
   const route = useRouteHandler();
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen bg-black relative">
+    <div className="wrapper">
       <Stars />
       <div>
         {props.img === "velaga" ? (

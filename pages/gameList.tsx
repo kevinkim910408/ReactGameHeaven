@@ -4,7 +4,7 @@ import useRouteHandler from "hooks/useRouteHandler";
 const gameList = () => {
   const route = useRouteHandler();
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen bg-black relative">
+    <div className="wrapper border-blue">
       <Stars />
       <span className="text-100 text-white">게임</span>
       <div
