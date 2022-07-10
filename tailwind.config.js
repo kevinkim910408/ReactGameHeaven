@@ -17,7 +17,17 @@ module.exports = {
       desktop: { min: "1024px" },
     },
 
-    colors: {},
+    colors: {
+      black: "#000",
+      white: "#fff",
+      yellow: "#FBFF26",
+      yellow_light: "#FFD74A",
+      red: "#FF0000",
+      green: "#00D13B",
+      pink: "#FF5084",
+      purple: "#8703EE",
+      blue: "#03A9F4",
+    },
 
     extend: {
       borderWidth: px0_10,
