@@ -1,7 +1,7 @@
 const Stars = () => {
   return (
     <>
-      <h3 className="absolute top-10 left-40">*</h3>
+      <h3 className="absolute top-10 left-96">*</h3>
       <h3 className="absolute top-50 left-80">*</h3>
       <h3 className="absolute bottom-10 left-12">*</h3>
       <h3 className="absolute bottom-10 right-20">*</h3>
