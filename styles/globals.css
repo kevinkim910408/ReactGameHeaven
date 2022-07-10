@@ -19,13 +19,13 @@
     @apply m-0 p-0 box-border font-body;
   }
   h1 {
-    @apply text-4xl drop-shadow-md text-white;
+    @apply text-80  text-white;
   }
   h2 {
-    @apply text-2xl drop-shadow-md text-white;
+    @apply text-55  text-white;
   }
   h3 {
-    @apply text-xl drop-shadow-md text-white;
+    @apply text-40  text-white;
   }
 
   input {
@@ -41,22 +41,7 @@
 
 /* custom classNames */
 @layer components {
-  .wrapper {
-    @apply relative w-full text-center;
-  }
-  .circle {
-    @apply rounded-full flex flex-col justify-center items-center;
-  }
   .hover {
-    @apply hover:bg-opacity-80 hover:cursor-pointer transition-all;
-  }
-  .submitBtn {
-    @apply w-full py-3 rounded-2xl hover shadow-md;
-  }
-  .loginBtn {
-    @apply flex items-center hover justify-center mx-3 my-3 rounded-xl;
-  }
-  .inputDiv {
-    @apply z-40 flex flex-col justify-center items-center w-full;
+    @apply hover:opacity-70 hover:cursor-pointer transition-all;
   }
 }
