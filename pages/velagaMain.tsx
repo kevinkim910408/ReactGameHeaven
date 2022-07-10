@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import velagaLogo from "../public/velaga/velagaLogo.png";
+import BackBtn from "components/backBtn";
 
 const velagaMain = () => {
   return (
     <div className="wrapper space-y-20">
+      <BackBtn />
       <div className="w-2/3 relative">
         <Image src={velagaLogo} layout="responsive" objectFit="contain" />
       </div>

@@ -27,12 +27,6 @@
   h3 {
     @apply text-40  text-white;
   }
-  textarea {
-    @apply focus:outline-none;
-  }
-  form {
-    @apply flex flex-col justify-center items-center;
-  }
 }
 
 /* custom classNames */
