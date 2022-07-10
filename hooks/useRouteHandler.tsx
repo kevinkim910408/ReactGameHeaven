@@ -9,3 +9,8 @@ const useRouteHandler = () => {
 };
 
 export default useRouteHandler;
+
+// 사용법
+// import useRouteHandler from "hooks/useRouteHandler";
+// const route = useRouteHandler();
+// onClick={() => route("/주소이름")}
