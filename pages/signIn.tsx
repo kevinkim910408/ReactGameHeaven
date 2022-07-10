@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import reactLogo from "../public/main/reactLogo.png";
 import useRouteHandler from "hooks/useRouteHandler";
-import { Router } from "next/router";
 import Stars from "components/velaga/Stars";
 
 const signIn = () => {

@@ -27,12 +27,6 @@
   h3 {
     @apply text-40  text-white;
   }
-  textarea {
-    @apply focus:outline-none;
-  }
-  form {
-    @apply flex flex-col justify-center items-center;
-  }
 }
 
 /* custom classNames */
@@ -42,5 +36,8 @@
   }
   .hover {
     @apply hover:opacity-70 hover:cursor-pointer transition-all;
+  }
+  .my-table-spacing {
+    border-spacing: theme("spacing.3");
   }
 }
