@@ -45,7 +45,7 @@ module.exports = {
         "4xl": "2rem",
       },
       fontFamily: {
-        body: ["EF_hyunygothic"],
+        body: ["dalmoori"],
       },
     },
   },

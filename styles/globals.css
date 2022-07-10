@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
 /* Import Fonts*/
 @font-face {
-  font-family: "EF_hyunygothic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunygothic.woff2")
-    format("woff2");
+  font-family: "dalmoori";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* html, body, heading */
@@ -15,11 +19,15 @@
     @apply m-0 p-0 box-border font-body;
   }
   h1 {
-    @apply text-4xl drop-shadow-md;
+    @apply text-4xl drop-shadow-md text-white;
   }
   h2 {
-    @apply text-2xl drop-shadow-md;
+    @apply text-2xl drop-shadow-md text-white;
   }
+  h3 {
+    @apply text-xl drop-shadow-md text-white;
+  }
+
   input {
     @apply appearance-none border-none w-full py-4 px-3 text-lg shadow-md rounded-xl z-40 focus:outline-none;
   }
