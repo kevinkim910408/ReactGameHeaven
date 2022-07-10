@@ -3,6 +3,7 @@ import Image from "next/image";
 import reactLogo from "../public/main/reactLogo.png";
 import useRouteHandler from "hooks/useRouteHandler";
 import { Router } from "next/router";
+import Stars from "components/velaga/Stars";
 
 const signIn = () => {
   const [nickname, setNickname] = useState("");
@@ -16,6 +17,7 @@ const signIn = () => {
 
   return (
     <div className="wrapper border-blue">
+      <Stars />
       <Image src={reactLogo} />
       <h2>사용하실 닉네임을 입력해주세요.</h2>
       <h3 className="mt-2">(2~6글자로 입력해주세요.)</h3>
