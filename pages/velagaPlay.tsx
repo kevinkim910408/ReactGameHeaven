@@ -12,11 +12,19 @@ const velagaPlay = () => {
     const key = e.code;
     switch (key) {
       case "ArrowLeft": {
-        setPositionX(positionX - 10);
+        if (positionX > -350) {
+          setPositionX(positionX - 10);
+        } else {
+          setPositionX(-350);
+        }
         break;
       }
       case "ArrowRight": {
-        setPositionX(positionX + 10);
+        if (positionX < 350) {
+          setPositionX(positionX + 10);
+        } else {
+          setPositionX(350);
+        }
         break;
       }
     }
