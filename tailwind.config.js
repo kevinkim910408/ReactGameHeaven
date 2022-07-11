@@ -28,6 +28,7 @@ module.exports = {
       purple: "#8703EE",
       blue: "#03A9F4",
       gray: "#DDDDDD",
+      velaga_green: "#9EE07A",
     },
 
     extend: {
