@@ -1,16 +1,10 @@
 import Stars from "components/velaga/Stars";
+import useGetNickname from "hooks/useGetNickname";
 import useRouteHandler from "hooks/useRouteHandler";
-import { useEffect, useState } from "react";
 
 const gameList = () => {
   const route = useRouteHandler();
-  const [nickname, setNickname] = useState("");
-  useEffect(() => {
-    const localStorageNickname = localStorage.getItem("nickname");
-    if (localStorageNickname !== null) {
-      setNickname(localStorageNickname);
-    }
-  }, []);
+  const nickname = useGetNickname();
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-black relative">

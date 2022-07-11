@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import velagaLogo from "../public/velaga/velagaLogo.png";
-import BackBtn from "components/backBtn";
+import BackBtn from "components/BackBtn";
 
 const velagaRanking = () => {
   return (
