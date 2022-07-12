@@ -1,7 +1,8 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef } from "react";
 import Image from "next/image";
 import player from "../../public/velaga/playerVSCode.png";
 import useGetLocation from "hooks/Velaga/useGetLocation";
+import Bullet from "./Bullet";
 
 const Player = ({ positionX }: { positionX: number }) => {
   // 총알 시작하는 좌표 구하기
@@ -13,6 +14,7 @@ const Player = ({ positionX }: { positionX: number }) => {
 
   return (
     <div className="w-full h-full flex justify-center">
+      <Bullet bulletX={bulletX} bulletY={bulletY} />
       <div className={"w-[80px] h-full transition"} ref={playerRef}>
         <Image src={player} layout="responsive" objectFit="contain" />
       </div>
@@ -20,23 +22,6 @@ const Player = ({ positionX }: { positionX: number }) => {
         {`
           .transition {
             transform: translateX(${positionX}px);
-          }
-          .bulletLocation {
-            position: fixed;
-            top: ${bulletY};
-            left: ${bulletX}px;
-          }
-          @keyframes bulletAnimation {
-            from {
-              transform: translateY(0);
-            }
-            to {
-              transform: translateY(-1000px);
-            }
-          }
-          .bulletTransition {
-            animation: bulletAnimation 5s;
-            animation-fill-mode: forwards;
           }
         `}
       </style>
