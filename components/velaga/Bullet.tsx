@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface BulletLocation {
   bulletX?: number;
   bulletY?: number;
+  text: string;
 }
 
-const Bullet = ({ bulletX, bulletY }: BulletLocation) => {
+const Bullet = ({ bulletX, bulletY, text }: BulletLocation) => {
+  const [arr, setArr] = useState([0]);
+  const [transitionY, setTransitionY] = useState(bulletY);
+  const [transitionX, setTransitionX] = useState(bulletX);
+
+  useEffect(() => {
+    setTransitionY(bulletY);
+    setTransitionX(bulletX);
+  }, [bulletY]);
+
+  // 총알 움직이기(Y축)
+  const bulletTransitionY = () => {
+    if (transitionY) {
+      setTransitionY(transitionY - 50);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(bulletTransitionY, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [transitionY]);
+
   return (
     <>
-      <span className="text-white bulletStart">0</span>
+      <div className="text-white bulletStart">{text}</div>
+
       <style jsx>
         {`
           .bulletStart {
             position: fixed;
-            top: ${bulletY}px;
-            left: ${bulletX}px;
+            top: ${transitionY}px;
+            left: ${transitionX}px;
           }
         `}
       </style>
