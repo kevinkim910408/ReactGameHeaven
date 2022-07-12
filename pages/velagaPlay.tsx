@@ -13,7 +13,7 @@ const velagaPlay = () => {
     switch (key) {
       case "ArrowLeft": {
         if (positionX > -350) {
-          setPositionX(positionX - 10);
+          setPositionX(positionX - 20);
         } else {
           setPositionX(-350);
         }
@@ -21,7 +21,7 @@ const velagaPlay = () => {
       }
       case "ArrowRight": {
         if (positionX < 350) {
-          setPositionX(positionX + 10);
+          setPositionX(positionX + 20);
         } else {
           setPositionX(350);
         }
@@ -31,6 +31,7 @@ const velagaPlay = () => {
   };
   // ㅣocalStorage에서 닉네임 가져오는 custom hook
   const nickname = useGetNickname();
+
   return (
     <div className="wrapper h-screen" onKeyDown={handleKeyPress} tabIndex={0}>
       <h4 className="fixed top-5 left-5">{nickname}님</h4>
