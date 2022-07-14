@@ -1,24 +1,49 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import player from "../../public/velaga/playerVSCode.png";
 import useGetLocation from "hooks/Velaga/useGetLocation";
-import Bullet from "./Bullet";
+import BulletContainer from "components/velaga/BulletContainer";
 
-const Player = ({ positionX }: { positionX: number }) => {
+// interface Props {
+//   positionX: number;
+// }
+
+const Player = () => {
+  // 키보드 누를 때 이벤트
+  const [positionX, setPositionX] = useState<number>(0);
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    e.preventDefault();
+    const key = e.code;
+    switch (key) {
+      case "ArrowLeft": {
+        if (positionX > -350) {
+          setPositionX(positionX - 20);
+        } else {
+          setPositionX(-350);
+        }
+        break;
+      }
+      case "ArrowRight": {
+        if (positionX < 350) {
+          setPositionX(positionX + 20);
+        } else {
+          setPositionX(350);
+        }
+        break;
+      }
+    }
+  };
   // 총알 시작하는 좌표 구하는 커스텀 훅
   const playerRef = useRef<HTMLDivElement>(null);
   const { bulletX, bulletY } = useGetLocation(playerRef);
-  // 총알 만드는 배열
-  const arr = ["0", "1"];
 
   return (
-    <div className="w-full h-full flex justify-center">
-      <>
-        {arr.map((val, idx) => (
-          <Bullet key={idx} bulletX={bulletX} bulletY={bulletY} text={val} />
-        ))}
-      </>
-      {/* <Bullet bulletX={bulletX} bulletY={bulletY} text="0" />; */}
+    <div
+      className="w-full h-full flex justify-center"
+      onKeyDown={handleKeyPress}
+      tabIndex={0}
+    >
+      <BulletContainer bulletX={bulletX} bulletY={bulletY} />
       <div className={"w-[80px] h-full transition"} ref={playerRef}>
         <Image src={player} layout="responsive" objectFit="contain" />
       </div>

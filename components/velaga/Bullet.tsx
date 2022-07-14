@@ -7,7 +7,6 @@ interface BulletLocation {
 }
 
 const Bullet = ({ bulletX, bulletY, text }: BulletLocation) => {
-  const [arr, setArr] = useState([0]);
   const [transitionY, setTransitionY] = useState(bulletY);
   const [transitionX, setTransitionX] = useState(bulletX);
 
