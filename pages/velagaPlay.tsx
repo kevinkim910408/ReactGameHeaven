@@ -22,7 +22,8 @@ const velagaPlay = () => {
         </div>
       </div>
       <h4 className="mt-5 fixed bottom-0">
-        조작 방법 : 키보드 좌우키로 VSCode를 움직여서 Error를 무찌르세요!
+        조작 방법 : 키보드 좌우키로 VSCode를 움직여서 Error를 무찌르세요! *
+        움직이지 않는다면 VSCode를 한 번 클릭한 뒤, 움직여보세요.
       </h4>
     </div>
   );

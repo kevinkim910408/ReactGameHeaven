@@ -4,10 +4,6 @@ import player from "../../public/velaga/playerVSCode.png";
 import useGetLocation from "hooks/Velaga/useGetLocation";
 import BulletContainer from "components/velaga/BulletContainer";
 
-// interface Props {
-//   positionX: number;
-// }
-
 const Player = () => {
   // 키보드 누를 때 이벤트
   const [positionX, setPositionX] = useState<number>(0);
